@@ -1,0 +1,419 @@
+.header {
+  max-width: 1200px;
+  padding: 1rem 0.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem;
+  justify-content: center;
+}
+
+.nav-menu a {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-menu a {
+    background: #e5e1da;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+  }
+}
+
+.intro {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.intro img {
+  border-radius: 50%;
+}
+
+.intro h1 {
+  font-size: 5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../assets/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+
+.intro p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 900px) {
+  .intro h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro h1::before {
+    width: 40px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .intro img {
+    display: none;
+  }
+}
+
+.Experiência {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.Experiência .subtitulo {
+  color: #e0e0e0;
+}
+
+.exp-texto {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 3rem;
+  max-width: 40ch;
+  color: #525252;
+}
+
+.empresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#7360df, #c499f3);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.empresa-titulo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.empresa-texto {
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 10px;
+  color: #525252;
+}
+
+.empresa-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.empresa-lista li {
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background: #ffffff;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .Experiência {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .Experiência-subtitulo {
+    margin-top: 30px;
+  }
+
+  .Experiência-texto {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formação {
+  background: #eee7da;
+}
+
+.formação-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+}
+
+.formação-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  background: url("../assets/detalhe.svg") no-repeat center;
+  bottom: -50px;
+  left: 20px;
+}
+
+.formação .subtitulo {
+  align-self: center;
+  color: #3e3232;
+  max-width: 5ch;
+}
+
+.formação-texto {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 3rem;
+  max-width: 40ch;
+  color: #525252;
+}
+
+.facul-lista {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.faculdade {
+  background: #776b5d;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.facul-tipo {
+  font-size: 0.853;
+  text-transform: uppercase;
+  color: #eee7da;
+  margin-bottom: 10px;
+}
+
+.facul-curso {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+  color: #e5e1da;
+}
+
+.facul-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 10.8rem;
+  background: linear-gradient(#8b7e74, #c7bca1);
+  position: absolute;
+  border-radius: 2px;
+  top: -45px;
+  left: -24px;
+}
+
+.facul-lugar {
+  font-size: 1.1rem;
+  color: #eee7da;
+}
+
+.cursos {
+  margin-bottom: 2.5rem;
+}
+
+.idiomas {
+  margin-bottom: 2.5rem;
+}
+
+.formação-extra h3 {
+  position: relative;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 0.853rem;
+  line-height: 1.4;
+}
+
+.formação-extra h3::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: -36px;
+  top: -4px;
+}
+
+.cursos h3::before {
+  background: url("../assets/cursos.svg") no-repeat center center;
+}
+
+.idiomas h3::before {
+  background: url("../assets/idiomas.svg") no-repeat center center;
+}
+
+.formação-extra li {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+.formação-extra span {
+  color: #8b7e74;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .formação {
+    border-top-left-radius: 15rem;
+  }
+
+  .formação-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .formação-texto {
+    font-size: 1.25rem;
+  }
+
+  .formação-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+
+  .formação-container::after {
+    display: none;
+  }
+}
+
+.rodape {
+  background: #ebe3d5;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  padding: 120px 20px 50px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+  align-items: center;
+}
+
+.titulo-rodape {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #8b7e74;
+}
+
+.contato-rodape {
+  font-size: 1.53rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.contato-rodape li {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #594545;
+}
+
+.copy-rodape {
+  grid-column: 1 / -1;
+  font-size: 0.953rem;
+  line-height: 2rem;
+  color: #3e3232;
+}
+
+@media (max-width: 800px) {
+  .rodape-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .titulo-rodape {
+    font-size: 1.25rem;
+  }
+
+  .contato-rodape {
+    font-size: 1.25rem;
+  }
+}
